@@ -12,7 +12,7 @@ const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin')
 const env = require('../environment/prod.env')
 
 const extractSass = new ExtractTextPlugin({
-  filename: 'css/[name].[contenthash].css',
+  filename: 'css/[name].css',
   disable: process.env.NODE_ENV === 'development'
 })
 

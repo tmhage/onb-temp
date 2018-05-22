@@ -11,7 +11,7 @@ let config = {
     path: helpers.root('/wwwroot/dist'),
     filename: 'js/[name].[hash].js',
     chunkFilename: 'js/[name].[hash].js',
-    publicPath: '/'
+    publicPath: '/dist/'
   },
   devtool: 'source-map',
   resolve: {

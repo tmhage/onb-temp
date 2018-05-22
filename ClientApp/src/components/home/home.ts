@@ -10,5 +10,6 @@ import './home.scss'
 export class HomeComponent extends Vue {
 
   title: string = 'Franx'
+  required: string = null
 
 }

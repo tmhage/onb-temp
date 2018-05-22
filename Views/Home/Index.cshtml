@@ -1,9 +1,15 @@
 @{
-    ViewData["Title"] = "Home Page";
+  ViewData["Title"] = "Home Page";
 }
 
-<div id='app-root'>Loading...</div>
-
-@section scripts {
-    <script src="~/dist/main.js" asp-append-version="true"></script>
-}
+<div id="app-main">
+  <heading></heading>
+  <main class="main">
+    <div class="container">
+      <div class="col-xs-12 md-elevation-1 bg-color-white">
+        <router-view>loading...</router-view>
+      </div>
+    </div>
+  </main>
+  <footer class="footer"></footer>
+</div>
