@@ -1,0 +1,25 @@
+// Libs
+@import "./01-lib/**/*.scss";
+
+// Settings
+@import '02-settings/typography';
+@import '02-settings/sizing';
+@import '02-settings/colors';
+
+// Elements
+@import "./03-elements/**/*.scss";
+
+// Objects
+@import "./04-objects/**/*.scss";
+
+// Components
+@import "./05-components/**/*.scss";
+
+
+@import "~vue-material/dist/theme/engine"; // Import the theme engine
+
+@include md-register-theme("default", (
+  primary: #40ABC3, // The primary color of your application
+));
+
+@import "~vue-material/dist/theme/all"; // Apply the theme

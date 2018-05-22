@@ -1,0 +1,10 @@
+$module: '.heading';
+
+#{$module} {
+    background-color: $color-white;
+    height: $header-height;
+
+    &--logo {
+        position: absolute;
+    }
+}

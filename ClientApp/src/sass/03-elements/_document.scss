@@ -1,0 +1,27 @@
+html {
+	box-sizing: border-box;
+	overflow-x: hidden; // hide overflowing elements such as long text on smaller screens
+}
+
+// hidden overflow on the body will break sticky positioned elements
+body {
+	margin: 0;
+	padding: 0;
+
+	color: $color-text;
+
+	font-size: #{$font-size-base};
+	//font-family: $font-face-body-webfont;
+
+	// https://developer.mozilla.org/en-US/docs/Web/CSS/font-variant
+	font-variant-ligatures: normal;
+	font-variant-numeric: tabular-nums;
+
+	// https://developer.mozilla.org/en-US/docs/Web/CSS/font-kerning
+	font-kerning: none;
+
+	line-height: #{$font-line-height-base};
+	text-decoration-skip: ink;
+
+	background-color: $color-tint-lighter;
+}

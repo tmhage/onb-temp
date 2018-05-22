@@ -1,0 +1,6 @@
+// sizes
+$font-size-px:					16; // in pixels
+$font-line-height-px:			24; // in pixels
+
+$font-size-base:				($font-size-px / 16) * 1rem; // convert px to rem
+$font-line-height-base:			$font-line-height-px / $font-size-px; // calculate the line height in rem

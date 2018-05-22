@@ -1,0 +1,16 @@
+// normalize
+@import "~normalize.css";
+
+// functions, variables and mixins needed for utility classes
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
+
+// utility classes
+@import "~bootstrap/scss/utilities";
+
+// grid
+@import "~bootstrap/scss/bootstrap-grid";
+
+// vue-material ui
+@import '~vue-material/dist/vue-material.min.css';
