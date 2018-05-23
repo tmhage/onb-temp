@@ -19,32 +19,20 @@ webpackConfig.module.rules = [...webpackConfig.module.rules,
     ]
   },
   {
-    test: /\.(jpg|png|gif|eot|svg|ttf|woff|woff2)$/,
-    loader: 'file-loader'
+    test: /\.styl$/,
+    loader: ['style-loader', 'css-loader', 'stylus-loader']
   }
 ]
 
 webpackConfig.plugins = [...webpackConfig.plugins,
   new HtmlWebpackPlugin({
-    inject: true,
-    template: helpers.root('/ClientApp/src/index.html'),
-    favicon: helpers.root('/ClientApp/src/favicon.ico')
+    inject: false,
+    template: helpers.root('/Views/Shared/_LayoutTemplate.cshtml'),
+    filename: helpers.root('/Views/Shared/_Layout.cshtml'),
   }),
   new DefinePlugin({
     'process.env': env
   })
 ]
-
-webpackConfig.devServer = {
-  port: 8080,
-  host: 'localhost',
-  historyApiFallback: true,
-  watchOptions: {
-    aggregateTimeout: 300,
-    poll: 1000
-  },
-  contentBase: './Clientapp/src',
-  open: true
-}
 
 module.exports = webpackConfig

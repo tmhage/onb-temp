@@ -1,7 +1,8 @@
 import Vue from 'vue'
 import { makeHot, reload } from './util/hot-reload'
 import { createRouter } from './router'
-import { MdInput, MdField } from 'vue-material/dist/components'
+
+import 'babel-polyfill'
 
 import './sass/main.scss'
 
@@ -17,15 +18,11 @@ if (process.env.ENV === 'development' && module.hot) {
     module.hot.accept('./components/heading', () => reload(headingModuleId, (require('./components/heading') as any).HeadingComponent)))
 }
 
-Vue.use(MdField)
-
 // tslint:disable-next-line:no-unused-expression
 new Vue({
   el: '#app-main',
   router: createRouter(),
   components: {
-    'heading': HeadingComponent,
-    'md-field': MdField,
-    'md-input': MdInput
+    'heading': HeadingComponent
   }
 })

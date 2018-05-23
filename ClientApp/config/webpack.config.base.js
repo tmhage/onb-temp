@@ -17,8 +17,7 @@ let config = {
   resolve: {
     extensions: ['.ts', '.js', '.html'],
     alias: {
-      'vue$': 'vue/dist/vue.esm.js',
-      'vuetify': 'vuetify/es5/components',
+      vue: 'vue/dist/vue.js'
     }
   },
   module: {
@@ -45,7 +44,28 @@ let config = {
       test: /\.html$/,
       loader: 'raw-loader',
       exclude: ['./src/index.html']
-    }
+      },
+      {
+        test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
+        loader: 'url-loader',
+        options: {
+          limit: 10000,
+        }
+      },
+      {
+        test: /\.(mp4|webm|ogg|mp3|wav|flac|aac)(\?.*)?$/,
+        loader: 'url-loader',
+        options: {
+          limit: 10000,
+        }
+      },
+      {
+        test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,
+        loader: 'url-loader',
+        options: {
+          limit: 10000,
+        }
+      }
     ]
   },
   plugins: [
