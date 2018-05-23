@@ -8,8 +8,5 @@ import './home.scss'
   }
 })
 export class HomeComponent extends Vue {
-
   title: string = 'Hello Franx!'
-
-
 }
